@@ -1,0 +1,25 @@
+<?php
+$expire=time()-60*60*24;
+setcookie("user","BUCK",$expire);
+?>
+<?php
+session_start();
+if(isset($_SESSION["view"])){
+$_SESSION["view"]=$_SESSION["view"]+1;
+}else{
+$_SESSION["view"]=1;
+}
+echo "views for now-> ".$_SESSION["view"]."<br>";
+?>
+<html>
+<head>
+<title>FUCK</title>
+</head>
+<body>
+<form action="fi.php" method="post" enctype="multipart/form-data">
+<label for "file">FILENAME</label>
+<input type="file" name="file" id="file"><br>
+<input type="submit" name="submit" value="submit"><br>
+</form>
+</body>
+</html>

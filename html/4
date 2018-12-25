@@ -1,0 +1,13 @@
+<?php
+$server="localhost";
+$username="root";
+$password="megvii";
+$dbname="pdb";
+$conn=new mysqli($server,$username,$password,$dbname);
+if($conn->connect_error){
+echo "OOPS ".$conn->connect_error."<br>";
+}else{
+echo "CONNECTED<br>";
+}
+$conn->close();
+?>
